@@ -1,0 +1,112 @@
+/* =====================================================================
+   Global Header – Enterprise Blue Edition
+   ===================================================================== */
+
+:root {
+  --blue-50:  #f0f6ff;
+  --blue-100: #d9eaff;
+  --blue-200: #b3d5ff;
+  --blue-300: #8bbfff;
+  --blue-400: #64aaff;
+  --blue-500: #3d95ff;
+  --blue-600: #1f7fff;
+  --blue-700: #0066e0;
+  --blue-800: #004faf;
+  --blue-900: #00377f;
+
+  --white: #ffffff;
+  --shadow-md: 0 2px 12px rgba(0, 63, 122, 0.18);
+}
+
+header {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: var(--white);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Logo / Brand */
+.header-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo img {
+  height: 36px;
+  width: auto;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: var(--white);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--blue-400);
+  transition: width 0.25s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--blue-100);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Action buttons (optional) */
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-action .btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--blue-500);
+  color: var(--white);
+  transition: background 0.25s, box-shadow 0.25s;
+  box-shadow: 0 1px 2px rgba(0, 59, 122, 0.05);
+}
+
+.header-action .btn:hover {
+  background: var(--blue-400);
+  box-shadow: 0 3px 6px rgba(0, 59, 122, 0.15);
+}
